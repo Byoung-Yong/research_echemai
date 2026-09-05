@@ -9,7 +9,7 @@ Deployment-ready, English-only static website for selected 2026 electrochemistry
 - Chronological note numbering: oldest = 1, newest = 18
 - Adjustable article reading width: Narrow / Standard / Wide
 - Source-verification notes for each article
-- SEO canonical metadata, sitemap, robots.txt, and 404 page
+- Google-focused SEO metadata, Article/Breadcrumb structured data, internal related-note links, sitemap, robots.txt, and 404 page
 - Dependency-free local server and production build
 - Vercel deployment configuration
 
@@ -51,3 +51,7 @@ Import this folder or its Git repository into Vercel. The included `vercel.json`
 - Output directory: `dist`
 
 Production URL expected by canonical metadata: `https://research.echemai.com/`.
+
+## Google Search
+
+After production deployment, follow `SEO_DEPLOY.md` to verify Search Console, submit the sitemap, request indexing, and test structured data.
