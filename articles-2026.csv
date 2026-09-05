@@ -1,0 +1,19 @@
+note,date,slug,title,doi
+1,2026-01-02,001-neurotransmitter-signal-separation,Can deep learning separate two electrochemical signals that overlap and change with time?,10.1021/acs.analchem.5c04155
+2,2026-01-05,002-lower-ir-pem-anodes,Can published PEM-electrolyzer data guide the design of lower-iridium anodes?,10.1021/acsaem.5c03017
+3,2026-01-29,003-ml-tungsten-water-electrolysis,Can a pretrained machine-learning potential find a practical noble-metal-free OER catalyst in a large atomic configuration space?,10.1038/s41467-026-68735-3
+4,2026-02-03,004-high-entropy-ldh-oer,How much catalyst composition space can be searched from only 70 experiments?,10.1021/acscatal.5c07303
+5,2026-02-09,005-pfas-system-selectivity,Can machine learning recover selectivity when the electrochemical sensor chemistry is not perfectly selective?,10.1021/acselectrochem.5c00436
+6,2026-03-12,006-co2-microenvironment-ml,Can machine learning help identify which interfacial descriptors control CO2-reduction microenvironments?,10.1021/acsnano.5c18241
+7,2026-03-19,007-autonomous-electrosynthesis,What changes when an electrochemical experiment can choose its own next conditions?,10.1016/j.chempr.2026.102952
+8,2026-03-27,008-active-learning-electrolytes,Can an algorithm decide which battery electrolyte experiments are worth doing next?,10.1038/s41467-026-70973-4
+9,2026-04-08,009-bubble-dynamics-electrolysis,Can machine vision teach us what the voltage noise of gas-evolving electrodes means?,10.1021/acselectrochem.6c00030
+10,2026-04-13,010-mlip-electrode-electrolyte-interface,Can machine-learning potentials make atomistic electrochemical-interface simulations large enough to become more useful?,10.1021/acselectrochem.5c00540
+11,2026-05-01,011-real-time-cod-monitoring,Can an electrochemical sensor plus machine learning turn COD into a 10-second online measurement?,10.1016/j.cej.2026.175515
+12,2026-05-12,012-multiplexed-biomarker-sensing,Can the sensor materials be designed to make machine learning better at separating overlapping biomarkers?,10.1021/acselectrochem.6c00079
+13,2026-06-04,013-pem-mea-optimization,Can a machine-learning surrogate make multiobjective PEM-electrolyzer design fast enough to optimize?,10.1021/acs.iecr.6c00681
+14,2026-07-01,014-transfer-learning-high-entropy-co2,Can catalyst knowledge be transferred from simple alloys to high-entropy surfaces instead of learning the hardest chemistry from scratch?,10.1016/j.electacta.2026.148720
+15,2026-07-11,015-eis-cnn-equivalent-circuits,Can a neural network choose an equivalent-circuit class from an impedance spectrum?,10.1038/s41524-026-02225-4
+16,2026-08-09,016-ph-adaptive-aptamer-sensing,Can an electrochemical biosensor recognize its environment before estimating concentration?,10.1021/acssensors.6c01536
+17,2026-08-11,017-virtual-reference-electrode,Can machine learning create a useful reference-electrode signal without putting a reference electrode in the battery?,10.1038/s41467-026-76535-y
+18,2026-08-21,018-pdau-orr-ml-to-experiment,Can a large machine-learning catalyst model make a prediction that survives an actual electrochemical experiment?,10.1021/acsaem.6c02281
