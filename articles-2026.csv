@@ -17,3 +17,9 @@ note,date,slug,title,doi
 16,2026-08-09,016-ph-adaptive-aptamer-sensing,Can an electrochemical biosensor recognize its environment before estimating concentration?,10.1021/acssensors.6c01536
 17,2026-08-11,017-virtual-reference-electrode,Can machine learning create a useful reference-electrode signal without putting a reference electrode in the battery?,10.1038/s41467-026-76535-y
 18,2026-08-21,018-pdau-orr-ml-to-experiment,Can a large machine-learning catalyst model make a prediction that survives an actual electrochemical experiment?,10.1021/acsaem.6c02281
+19,2026-08-27,019-ml-dft-co2rr-single-atom-catalysts,Can machine learning turn a small first-principles catalyst set into useful rules for CO2 electroreduction?,10.1021/acsaem.6c01772
+20,2026-09-04,020-multiagent-llm-orr-catalyst-design,Can multiple LLM agents learn electrocatalyst design rules instead of only ranking candidates?,10.1021/acscentsci.6c01260
+21,2026-09-09,021-physics-informed-dual-atom-orr-screening,Can catalyst screening become more realistic by learning operating conditions and structural ensembles?,10.1021/acscatal.6c04252
+22,2026-09-16,022-ml-phase-field-lithium-dendrites,Can machine learning turn phase-field simulations into a usable map of lithium dendrite risk?,10.1021/acs.nanolett.6c03313
+23,2026-09-23,023-axial-ligand-ml-co2-to-formate,Can machine learning identify how axial ligands tune single-atom catalysts for CO2-to-formate conversion?,10.1016/j.jechem.2026.09.028
+24,2026-09-28,024-physics-guided-sweat-biosensor-calibration,Can physics-guided machine learning make wearable electrochemical biosensor calibration more reliable?,10.1038/s41598-026-69813-8

@@ -28,10 +28,10 @@ This package is prepared for `https://research.echemai.com/`.
 - `WebSite`, `Organization`, `CollectionPage`, and `ItemList` structured data on the archive page
 - Visible Research Note publication date and EchemAI editorial authorship
 - Internal `Related Research Notes` links between semantically connected articles
-- XML sitemap with significant-update `lastmod=2026-09-05`
+- XML sitemap with significant-update `lastmod=2026-10-01`
 - `robots.txt` pointing to the sitemap
 - `404.html` marked `noindex,follow`
 
 ## Important date convention
 
-The date in the paper citation is the source paper's publication date. The Research Note's own publication/modified date is `2026-09-05`. Sitemap `lastmod` follows the Research Note page update date, not the source paper date.
+The date in the paper citation is the source paper's publication date. The Research Note's own publication/modified date is `2026-10-01`. Sitemap `lastmod` follows the Research Note page update date, not the source paper date.

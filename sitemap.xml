@@ -1,6 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url><loc>https://research.echemai.com/</loc><lastmod>2026-09-05</lastmod></url>
+  <url><loc>https://research.echemai.com/</loc><lastmod>2026-10-01</lastmod></url>
+  <url><loc>https://research.echemai.com/article/024-physics-guided-sweat-biosensor-calibration/</loc><lastmod>2026-10-01</lastmod></url>
+  <url><loc>https://research.echemai.com/article/023-axial-ligand-ml-co2-to-formate/</loc><lastmod>2026-10-01</lastmod></url>
+  <url><loc>https://research.echemai.com/article/022-ml-phase-field-lithium-dendrites/</loc><lastmod>2026-10-01</lastmod></url>
+  <url><loc>https://research.echemai.com/article/021-physics-informed-dual-atom-orr-screening/</loc><lastmod>2026-10-01</lastmod></url>
+  <url><loc>https://research.echemai.com/article/020-multiagent-llm-orr-catalyst-design/</loc><lastmod>2026-10-01</lastmod></url>
+  <url><loc>https://research.echemai.com/article/019-ml-dft-co2rr-single-atom-catalysts/</loc><lastmod>2026-10-01</lastmod></url>
   <url><loc>https://research.echemai.com/article/018-pdau-orr-ml-to-experiment/</loc><lastmod>2026-09-05</lastmod></url>
   <url><loc>https://research.echemai.com/article/017-virtual-reference-electrode/</loc><lastmod>2026-09-05</lastmod></url>
   <url><loc>https://research.echemai.com/article/016-ph-adaptive-aptamer-sensing/</loc><lastmod>2026-09-05</lastmod></url>
