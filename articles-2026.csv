@@ -23,3 +23,4 @@ note,date,slug,title,doi
 22,2026-09-16,022-ml-phase-field-lithium-dendrites,Can machine learning turn phase-field simulations into a usable map of lithium dendrite risk?,10.1021/acs.nanolett.6c03313
 23,2026-09-23,023-axial-ligand-ml-co2-to-formate,Can machine learning identify how axial ligands tune single-atom catalysts for CO2-to-formate conversion?,10.1016/j.jechem.2026.09.028
 24,2026-09-28,024-physics-guided-sweat-biosensor-calibration,Can physics-guided machine learning make wearable electrochemical biosensor calibration more reliable?,10.1038/s41598-026-69813-8
+25,2026-11-18,025-ml-lioh-lithium-oxygen,AI가 찾은 Ni-Co 촉매는 리튬-산소 전지의 4전자 반응을 이끌 수 있을까?,10.1038/s41467-026-79335-6
