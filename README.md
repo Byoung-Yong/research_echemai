@@ -8,7 +8,7 @@ Updated through 24 November 2026.
 
 - 32 Research Notes
 - Reverse-chronological archive by original paper publication date
-- Stable note numbers and URLs: later-added retrospective notes retain their assigned IDs
+- Chronological note numbering by original paper publication date: oldest = 1, newest = 32
 - Adjustable article reading width: Narrow / Standard / Wide
 - Source-verification notes for each article
 - Google-focused SEO metadata, Article/Breadcrumb structured data, internal related-note links, sitemap, robots.txt, and 404 page

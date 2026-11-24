@@ -23,11 +23,11 @@ note,date,slug,title,doi
 22,2026-09-16,022-ml-phase-field-lithium-dendrites,Can machine learning turn phase-field simulations into a usable map of lithium dendrite risk?,10.1021/acs.nanolett.6c03313
 23,2026-09-23,023-axial-ligand-ml-co2-to-formate,Can machine learning identify how axial ligands tune single-atom catalysts for CO2-to-formate conversion?,10.1016/j.jechem.2026.09.028
 24,2026-09-28,024-physics-guided-sweat-biosensor-calibration,Can physics-guided machine learning make wearable electrochemical biosensor calibration more reliable?,10.1038/s41598-026-69813-8
-25,2026-11-18,025-ml-lioh-lithium-oxygen,Can machine learning guide a four-electron pathway in lithium–oxygen batteries?,10.1038/s41467-026-79335-6
-26,2026-10-05,026-rl-glycerol-electrooxidation,Can reinforcement learning discover a better way to operate an electrochemical reaction?,10.1039/d6ee02239a
-27,2026-10-15,027-constant-potential-mlp,Can a machine-learning potential respect the thermodynamics of a constant-potential electrode?,10.1103/9xzk-bg72
-28,2026-10-19,028-multifrequency-aptamer-fingerprints,Can multifrequency voltammetry distinguish targets that bind the same aptamer?,10.1021/acsmeasuresciau.6c00285
-29,2026-10-23,029-chemistry-infused-bandit-her,Can an autonomous catalyst search learn chemical design rules as it experiments?,10.1038/s41467-026-78335-w
-30,2026-10-31,030-finetuned-mlp-li-electrode-potential,Can a pretrained potential predict lithium electrode potentials across different electrolytes?,10.1021/jacs.6c12519
-31,2026-11-06,031-mlmd-graphite-sei-lithiation,Can reactive machine-learning dynamics explain how graphite lithiation changes the initial SEI?,10.1021/acsnano.6c13417
+25,2026-10-05,025-rl-glycerol-electrooxidation,Can reinforcement learning discover a better way to operate an electrochemical reaction?,10.1039/d6ee02239a
+26,2026-10-15,026-constant-potential-mlp,Can a machine-learning potential respect the thermodynamics of a constant-potential electrode?,10.1103/9xzk-bg72
+27,2026-10-19,027-multifrequency-aptamer-fingerprints,Can multifrequency voltammetry distinguish targets that bind the same aptamer?,10.1021/acsmeasuresciau.6c00285
+28,2026-10-23,028-chemistry-infused-bandit-her,Can an autonomous catalyst search learn chemical design rules as it experiments?,10.1038/s41467-026-78335-w
+29,2026-10-31,029-finetuned-mlp-li-electrode-potential,Can a pretrained potential predict lithium electrode potentials across different electrolytes?,10.1021/jacs.6c12519
+30,2026-11-06,030-mlmd-graphite-sei-lithiation,Can reactive machine-learning dynamics explain how graphite lithiation changes the initial SEI?,10.1021/acsnano.6c13417
+31,2026-11-18,031-ml-lioh-lithium-oxygen,Can machine learning guide a four-electron pathway in lithium–oxygen batteries?,10.1038/s41467-026-79335-6
 32,2026-11-20,032-ml-tomography-graphite-silicon,Can machine-learning-assisted tomography reveal local electrochemical activity inside a composite electrode?,10.1038/s41565-026-02327-6

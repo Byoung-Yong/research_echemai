@@ -79,7 +79,10 @@ const rows = csv.trim().split(/\r?\n/).slice(1).map(line => {
   if (!match) throw new Error('Invalid archive CSV row: ' + line);
   return { n: Number(match[1]), date: match[2], slug: match[3], doi: match[5] };
 });
-const expected = [...rows].sort((a,b) => b.date.localeCompare(a.date) || b.n-a.n).map(row => row.n);
+const chronological = [...rows].sort((a,b) => a.date.localeCompare(b.date) || a.n-b.n);
+if (chronological.some((row,i) => row.n !== i+1 || row.slug.slice(0,3) !== String(i+1).padStart(3,'0'))) failures.push('note numbers must follow original paper publication dates and match URL prefixes');
+if (rows.some((row,i) => row.n !== i+1)) failures.push('CSV rows must follow chronological note numbering');
+const expected = Array.from({length: rows.length}, (_,i) => rows.length-i);
 if (new Set(rows.map(row => row.n)).size !== rows.length || new Set(rows.map(row => row.doi.toLowerCase())).size !== rows.length || new Set(rows.map(row => row.slug)).size !== rows.length) failures.push('duplicate note number, DOI or slug in CSV');
 if (JSON.stringify(nums) !== JSON.stringify(expected)) {
   failures.push(`index numbering/order is ${JSON.stringify(nums)}, expected ${JSON.stringify(expected)}`);

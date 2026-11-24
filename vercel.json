@@ -3,5 +3,42 @@
   "buildCommand": "npm run build",
   "outputDirectory": "dist",
   "trailingSlash": true,
-  "cleanUrls": true
+  "cleanUrls": true,
+  "redirects": [
+    {
+      "source": "/article/026-rl-glycerol-electrooxidation/",
+      "destination": "/article/025-rl-glycerol-electrooxidation/",
+      "permanent": true
+    },
+    {
+      "source": "/article/027-constant-potential-mlp/",
+      "destination": "/article/026-constant-potential-mlp/",
+      "permanent": true
+    },
+    {
+      "source": "/article/028-multifrequency-aptamer-fingerprints/",
+      "destination": "/article/027-multifrequency-aptamer-fingerprints/",
+      "permanent": true
+    },
+    {
+      "source": "/article/029-chemistry-infused-bandit-her/",
+      "destination": "/article/028-chemistry-infused-bandit-her/",
+      "permanent": true
+    },
+    {
+      "source": "/article/030-finetuned-mlp-li-electrode-potential/",
+      "destination": "/article/029-finetuned-mlp-li-electrode-potential/",
+      "permanent": true
+    },
+    {
+      "source": "/article/031-mlmd-graphite-sei-lithiation/",
+      "destination": "/article/030-mlmd-graphite-sei-lithiation/",
+      "permanent": true
+    },
+    {
+      "source": "/article/025-ml-lioh-lithium-oxygen/",
+      "destination": "/article/031-ml-lioh-lithium-oxygen/",
+      "permanent": true
+    }
+  ]
 }
