@@ -2,13 +2,13 @@
 
 Deployment-ready, English-only static website for selected 2026 electrochemistry + AI research.
 
-Updated through 1 October 2026.
+Updated through 24 November 2026.
 
 ## Included
 
-- 24 Research Notes
-- Reverse-chronological archive: newest note first
-- Chronological note numbering: oldest = 1, newest = 24
+- 32 Research Notes
+- Reverse-chronological archive by original paper publication date
+- Stable note numbers and URLs: later-added retrospective notes retain their assigned IDs
 - Adjustable article reading width: Narrow / Standard / Wide
 - Source-verification notes for each article
 - Google-focused SEO metadata, Article/Breadcrumb structured data, internal related-note links, sitemap, robots.txt, and 404 page

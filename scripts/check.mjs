@@ -73,7 +73,14 @@ for (const file of htmlFiles) {
 
 const index = await readFile(path.join(root, 'index.html'), 'utf8');
 const nums = [...index.matchAll(/class=["']note-number["'][^>]*>\s*(\d+)\s*</g)].map(x => Number(x[1]));
-const expected = Array.from({length: 25}, (_,i) => 25-i);
+const csv = await readFile(path.join(root, 'articles-2026.csv'), 'utf8');
+const rows = csv.trim().split(/\r?\n/).slice(1).map(line => {
+  const match = line.match(/^(\d+),(\d{4}-\d{2}-\d{2}),([^,]+),(.*),([^,]+)$/);
+  if (!match) throw new Error('Invalid archive CSV row: ' + line);
+  return { n: Number(match[1]), date: match[2], slug: match[3], doi: match[5] };
+});
+const expected = [...rows].sort((a,b) => b.date.localeCompare(a.date) || b.n-a.n).map(row => row.n);
+if (new Set(rows.map(row => row.n)).size !== rows.length || new Set(rows.map(row => row.doi.toLowerCase())).size !== rows.length || new Set(rows.map(row => row.slug)).size !== rows.length) failures.push('duplicate note number, DOI or slug in CSV');
 if (JSON.stringify(nums) !== JSON.stringify(expected)) {
   failures.push(`index numbering/order is ${JSON.stringify(nums)}, expected ${JSON.stringify(expected)}`);
 }
@@ -82,16 +89,17 @@ if (!index.includes('CollectionPage') || !index.includes('ItemList') || !index.i
 }
 
 const articleDirs = (await readdir(articleRoot)).filter(n => /^\d{3}-/.test(n));
-if (articleDirs.length !== 25) failures.push(`expected 25 article directories, found ${articleDirs.length}`);
+if (articleDirs.length !== rows.length) failures.push(`expected ${rows.length} article directories, found ${articleDirs.length}`);
+if (JSON.stringify([...articleDirs].sort()) !== JSON.stringify(rows.map(row => row.slug).sort())) failures.push('article directories do not match CSV');
 
 for (const dir of articleDirs) {
   const n = Number(dir.slice(0,3));
   const text = await readFile(path.join(articleRoot, dir, 'index.html'), 'utf8');
   if (!text.includes(`Research Note ${n}`)) failures.push(`${dir}: Research Note number mismatch`);
-  if (!text.includes('"@type": "BlogPosting"')) failures.push(`${dir}: missing BlogPosting structured data`);
-  if (!text.includes('"@type": "BreadcrumbList"')) failures.push(`${dir}: missing BreadcrumbList structured data`);
-  const expectedPub = n === 25 ? '2026-11-24' : n >= 19 ? '2026-10-01' : '2026-09-05';
-  if (!text.includes(`\"datePublished\": \"${expectedPub}\"`)) failures.push(`${dir}: Research Note publication date mismatch`);
+  if (!/"@type"\s*:\s*"BlogPosting"/.test(text)) failures.push(`${dir}: missing BlogPosting structured data`);
+  if (!/"@type"\s*:\s*"BreadcrumbList"/.test(text)) failures.push(`${dir}: missing BreadcrumbList structured data`);
+  const expectedPub = n >= 25 ? '2026-11-24' : n >= 19 ? '2026-10-01' : '2026-09-05';
+  if (!new RegExp('"datePublished"\\s*:\\s*"' + expectedPub + '"').test(text)) failures.push(`${dir}: Research Note publication date mismatch`);
   const relatedCount = (text.match(/class=["']related-number["']/g) || []).length;
   if (relatedCount !== 3) failures.push(`${dir}: expected 3 related notes, found ${relatedCount}`);
 }
@@ -99,10 +107,15 @@ for (const dir of articleDirs) {
 const sitemap = await readFile(path.join(root, 'sitemap.xml'), 'utf8');
 const locs = [...sitemap.matchAll(/<loc>([^<]+)<\/loc>/g)].map(m => m[1]);
 const lastmods = [...sitemap.matchAll(/<lastmod>([^<]+)<\/lastmod>/g)].map(m => m[1]);
-if (locs.length !== 26) failures.push(`sitemap expected 26 URLs, found ${locs.length}`);
+if (locs.length !== rows.length + 1 || lastmods.length !== locs.length) failures.push('sitemap URL/date count does not match archive');
+const expectedLocs = ['https://research.echemai.com/', ...[...rows].sort((a,b) => b.date.localeCompare(a.date) || b.n-a.n).map(row => 'https://research.echemai.com/article/' + row.slug + '/')];
+if (JSON.stringify(locs) !== JSON.stringify(expectedLocs)) failures.push('sitemap URLs do not match archive order');
 if (lastmods[0] !== '2026-11-24') failures.push('homepage sitemap lastmod must be 2026-11-24');
-if (lastmods.slice(1,7).some(x => x !== '2026-10-01')) failures.push('new-note sitemap lastmod must be 2026-10-01');
-if (lastmods.slice(7,-1).some(x => x !== '2026-09-05') || lastmods.at(-1) !== '2026-11-24') failures.push('legacy-note sitemap lastmod must remain 2026-09-05');
+for (let i=1; i<locs.length; i++) {
+  const row = rows.find(row => locs[i] === 'https://research.echemai.com/article/' + row.slug + '/');
+  const date = row && (row.n >= 25 ? '2026-11-24' : row.n >= 19 ? '2026-10-01' : '2026-09-05');
+  if (!date || lastmods[i] !== date) failures.push('sitemap lastmod mismatch: ' + locs[i]);
+}
 
 const robotsTxt = await readFile(path.join(root, 'robots.txt'), 'utf8');
 if (!robotsTxt.includes('Sitemap: https://research.echemai.com/sitemap.xml')) failures.push('robots.txt sitemap URL mismatch');
@@ -116,4 +129,4 @@ if (failures.length) {
   for (const f of failures) console.error(`- ${f}`);
   process.exit(1);
 }
-console.log(`QA passed: ${htmlFiles.length} indexable HTML pages, 25 articles, unique titles, Article/Breadcrumb JSON-LD, related-note links, sitemap dates, and local links valid.`);
+console.log(`QA passed: ${htmlFiles.length} indexable HTML pages, ${articleDirs.length} articles, unique titles, Article/Breadcrumb JSON-LD, related-note links, sitemap dates, and local links valid.`);
